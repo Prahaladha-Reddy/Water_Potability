@@ -9,12 +9,15 @@ train=pd.read_csv('C:/Users/bored/Music/Water_Potability/data/processed/train.cs
 
 test=pd.read_csv('C:/Users/bored/Music/Water_Potability/data/processed/test.csv')
 
-x_train=train.iloc[:,0:-1].values
-y_train=train.iloc[:,-1].values
+x_train=train.drop(columns=['Potability'],axis=1)
+y_train=train['Potability']
 
-clf=RandomForestClassifier()
+from sklearn.tree import DecisionTreeClassifier
+model = DecisionTreeClassifier()
+model.fit(x_train, y_train) 
 
-clf.fit(x_train,y_train)
 
-pickle.dump(clf,open('model.pkl','wb'))
+from joblib import dump
+dump(model, 'C:/Users/bored/Music/Water_Potability/model.joblib')
+
 

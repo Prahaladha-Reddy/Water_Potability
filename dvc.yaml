@@ -2,28 +2,28 @@ stages:
   data_collection:
     cmd: python src/data_collection.py
     deps:
-    - src/data_collection.py
+      - src/data_collection.py
     outs:
-    - data/raw
+      - data/raw
   pre_processing:
     cmd: python src/data_prep.py
     deps:
-    - data/raw
-    - src/data_prep.py
+      - data/raw
+      - src/data_prep.py
     outs:
-    - data/processed
+      - data/processed
   model_building:
     cmd: python src/model_building.py
     deps:
-    - data/processed
-    - src/model_building.py
+      - data/processed
+      - src/model_building.py
     outs:
-    - model.pkl
+      - model.joblib
   model_eval:
     cmd: python src/model_eval.py
     deps:
-    - data/processed
-    - model.pkl
-    - src/model_eval.py
+      - data/processed
+      - model.joblib
+      - src/model_eval.py
     metrics:
-    - metrics.json
+      - metrics.json

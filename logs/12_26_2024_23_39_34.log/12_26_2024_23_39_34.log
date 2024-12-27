@@ -1,0 +1,7 @@
+[ 2024-12-26 23:39:38,604 ] 1038 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2024-12-26 23:39:38,620 ] 107 dagshub - INFO - Accessing as Prahaladha-Reddy
+[ 2024-12-26 23:39:39,562 ] 1038 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Prahaladha-Reddy/Network_Security "HTTP/1.1 200 OK"
+[ 2024-12-26 23:39:40,522 ] 1038 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2024-12-26 23:39:40,527 ] 107 dagshub - INFO - Initialized MLflow to track repo "Prahaladha-Reddy/Network_Security"
+[ 2024-12-26 23:39:40,538 ] 107 dagshub - INFO - Repository Prahaladha-Reddy/Network_Security initialized!
+[ 2024-12-26 23:39:40,556 ] 481 uvicorn.error - ERROR - Error loading ASGI app. Attribute "app" not found in module "main".

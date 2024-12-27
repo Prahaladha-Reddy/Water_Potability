@@ -10,7 +10,9 @@ test=pd.read_csv('C:/Users/bored/Music/Water_Potability/data/processed/test.csv'
 x_test=test.iloc[:,0:-1].values
 y_test=test.iloc[:,-1].values
 
-model=pickle.load(open('model.pkl','rb'))
+from joblib import load
+model = load('C:/Users/bored/Music/Water_Potability/model.joblib')
+
 
 y_pred=model.predict(x_test)
 

@@ -41,13 +41,13 @@ stages:
       nfiles: 2
     - path: src/model_building.py
       hash: md5
-      md5: 59e97c8036af91dbd456fe1d950cbc43
-      size: 521
+      md5: 8c5fa57934a2f2a2c6cb61df00e401b0
+      size: 643
     outs:
-    - path: model.pkl
+    - path: model.joblib
       hash: md5
-      md5: 78c7c2230d5bd347138d5a236d7ab18c
-      size: 7362510
+      md5: 91deac88bc8047aad44f3cd247894b6e
+      size: 87081
   model_eval:
     cmd: python src/model_eval.py
     deps:
@@ -56,16 +56,16 @@ stages:
       md5: 64393dc374dcf7f675ac8be8f38cf987.dir
       size: 546137
       nfiles: 2
-    - path: model.pkl
+    - path: model.joblib
       hash: md5
-      md5: 78c7c2230d5bd347138d5a236d7ab18c
-      size: 7362510
+      md5: 91deac88bc8047aad44f3cd247894b6e
+      size: 87081
     - path: src/model_eval.py
       hash: md5
-      md5: 0ebe775cb5ade9331d16ccb790191d58
-      size: 727
+      md5: 3a46d8646204be31fafc7417d2895b73
+      size: 779
     outs:
     - path: metrics.json
       hash: md5
-      md5: e1b430a86477d85a0a8f0280eebac5ec
-      size: 145
+      md5: 503440d78919d0f8ddc724bf32a9b828
+      size: 146
